@@ -5,7 +5,7 @@ const message = document.querySelector('.message');
 const reset = document.querySelector('.reset');
 let highScore = document.querySelector('.highscore');
 let score = document.querySelector('.score');
-const randomNum = Math.floor(1 + Math.random() * 20);
+let randomNum = Math.floor(1 + Math.random() * 20);
 const number = document.querySelector('.number');
 /* */
 const again = () => {
@@ -15,6 +15,7 @@ const again = () => {
   score.textContent = '20';
   number.textContent = '?';
   document.querySelector('body').style.backgroundColor = '#222';
+  randomNum = Math.floor(1 + Math.random() * 20);
 };
 const numGuess = () => {
   if (randomNum > Number(guess.value)) {
